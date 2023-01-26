@@ -2,41 +2,27 @@
 {
     public class Prize
     {
-        
+        public string Year { get; set; }
+        public string Category { get; set; }
+        public List<Laureate> Laureates { get; set; }
+        public string OverallMotivation { get; set; }
 
-        public string Year { get; }
-        public string Category { get; }
-        private Laureate[] Laureates { get; }
-
-        public string OverallMotivation { get; }
         
-        
-        public string[]? GetLaureateIds()
+        public Prize()
         {
-            var prizeLaureateIdList = new List<string>();
-            if (Laureates.Length <= 0) return null;
-            foreach (var laureate in Laureates)
-            {
-                prizeLaureateIdList.Add(laureate.Id);
-            }
-
-            return prizeLaureateIdList.ToArray();
+            Laureates = new List<Laureate>();
         }
 
-
-        public Laureate[]? FilterLaureates(string id)
+        
+        public void Show(string laureateId)
         {
-            var laureateList = new List<Laureate>();
-            if (Laureates.Length <= 0) return null;
-            foreach (var laureate in Laureates)
+            foreach (var laureate in Laureates.Where(l =>l.Id == laureateId))
             {
-                if (laureate.Id == id)
-                {
-                    laureateList.Add(laureate);
-                }
+                var firstName = laureate.Firstname;
+                var surName = laureate.Surname ?? "";
+                var name = $"{firstName} {surName}";
+                Console.WriteLine($"{Year} - {Category}: Winner {name}");
             }
-
-            return laureateList.ToArray();
         }
     }
 }
