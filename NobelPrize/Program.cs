@@ -22,4 +22,7 @@ var prizes = JsonSerializer.Deserialize<Prize[]>(prizesJson, options)!;
 var duplicatePrizeWinners = new DuplicatePrizeWinners(prizes);
 duplicatePrizeWinners.Show();
 
+//Because i want to
+Console.ReadKey();
+
 
