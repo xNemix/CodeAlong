@@ -1,0 +1,33 @@
+[
+  {
+    "year": "2022",
+    "category": "chemistry",
+    "laureates": [
+      {
+        "id": "1015",
+        "firstname": "Carolyn",
+        "surname": "Bertozzi",
+        "motivation": "\"for the development of click chemistry and bioorthogonal chemistry\"",
+        "share": "3"
+      },
+      {
+        "id": "1016",
+        "firstname": "Morten",
+        "surname": "Meldal",
+        "motivation": "\"for the development of click chemistry and bioorthogonal chemistry\"",
+        "share": "3"
+      },
+      {
+        "id": "743",
+        "firstname": "Barry",
+        "surname": "Sharpless",
+        "motivation": "\"for the development of click chemistry and bioorthogonal chemistry\"",
+        "share": "3"
+      }
+    ]
+  },
+  {
+    "year": "1922",
+    "category": "economics"
+  }
+]

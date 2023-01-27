@@ -7,16 +7,16 @@
         public List<Laureate> Laureates { get; set; }
         public string OverallMotivation { get; set; }
 
-        
+
         public Prize()
         {
             Laureates = new List<Laureate>();
         }
 
-        
+
         public void Show(string laureateId)
         {
-            foreach (var laureate in Laureates.Where(l =>l.Id == laureateId))
+            foreach (var laureate in Laureates.Where(l => l.Id == laureateId))
             {
                 var firstName = laureate.Firstname;
                 var surName = laureate.Surname ?? "";
